@@ -181,7 +181,7 @@ def make_heatmap(datapath, sampling_file, featsfile, root_dir, model_type, num_c
         transforms.ToTensor(),  # operated on original image, rewrite on previous transform.
         transforms.Normalize(norm_mean, norm_std)])
 
-    modelpath = get_modelpath(model_type + '.pkl')
+    modelpath = get_modelpath(model_type)
 
     if len(gpu) > 1:
         net = torch.nn.DataParallel(models.resnet18(pretrained=False, num_classes=num_classes)).cuda()

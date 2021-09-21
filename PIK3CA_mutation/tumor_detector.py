@@ -79,7 +79,7 @@ def net_pred_extract_feats(loader, net, cls=2):
 
 
 def start_model(datapath, feats_savepath):
-    modelpath = get_modelpath('norm_model_epoch_105.pkl')
+    modelpath = get_modelpath('norm_model_epoch_105')
     # os.environ['CUDA_VISIBLE_DEVICES'] = '0'
     print('Loading model...')
     net = load_net(modelpath, numclasses=5)

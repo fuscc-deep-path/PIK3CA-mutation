@@ -40,7 +40,7 @@ def start_model(datapath, sampling_file, root_dir, model_type, seed=2020, gpu="0
     testloader = DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=num_workers)
 
     net = getattr(models, net)(pretrained=False, num_classes=num_classes)
-    modelpath = get_modelpath(model_type + '.pkl')
+    modelpath = get_modelpath(model_type)
     print('Loading model...', modelpath)
 
     if len(gpu) > 1:
