@@ -75,11 +75,14 @@ def patient_res_m3_oneshop(scores_patch, namelist_patch, Cls):
 
     return scores_patient, predictions_patient, namelist_patient
 
+
 def get_modelpath(model_name):
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models', model_name + '.pkl')
 
+
 def get_scalerpath(scaler_name):
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'scaler', scaler_name)
+
 
 def get_thresholdpath(threshold_name):
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'threshold', threshold_name + '.npz')
